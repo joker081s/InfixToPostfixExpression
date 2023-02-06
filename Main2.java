@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Main2 {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -48,15 +48,6 @@ public class Main2 {
                     char anotherElement = stack.peek();
                     switch(element) {
                         case '+' : case '-' :
-//                            do {
-//                                if (anotherElement == '+' || anotherElement == '-' || anotherElement == '/' || anotherElement == '*' || anotherElement == '^') {
-//                                    evlStr += stack.pop();
-//                                    if (stack.isEmpty()) {
-//                                        break;
-//                                    }
-//                                    anotherElement = stack.peek();
-//                                }
-//                            } while (anotherElement == '+' || anotherElement == '-' || anotherElement == '*' || anotherElement == '/' || anotherElement == '^');
                             while(anotherElement == '+' || anotherElement == '-' || anotherElement == '*' || anotherElement == '/' || anotherElement == '^') {
                                 evlStr += stack.pop();
                                 if (stack.isEmpty()) {
@@ -67,15 +58,6 @@ public class Main2 {
                             stack.push(element);
                             break;
                         case '/' : case '*' :
-//                            do {
-//                                if (anotherElement == '/' || anotherElement == '*' || anotherElement == '^') {
-//                                    evlStr += stack.pop();
-//                                    if (stack.isEmpty()) {
-//                                        break;
-//                                    }
-//                                    anotherElement = stack.peek();
-//                                }
-//                            } while (anotherElement == '*' || anotherElement == '/' || anotherElement == '^');
                             while (anotherElement == '*' || anotherElement == '/' || anotherElement == '^') {
                                 evlStr += stack.pop();
                                 if (stack.isEmpty()) {
